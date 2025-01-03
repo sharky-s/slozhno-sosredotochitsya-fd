@@ -227,13 +227,14 @@
   align-items: center;
   justify-items: center; 
   position: relative;
-  min-height: 646px;
+  min-height: 647px;
 }
 
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   text-transform: lowercase;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   color: var(--title-color);
+  margin: 0px 1px 0px 4px;
 }
