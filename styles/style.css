@@ -1,5 +1,202 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--background-color);
+  margin: 0;
+  /* Убираем отступы */
+  padding: 10px;
+  /* Добавляем внутренний отступ */
+  font-family: 'IBM Plex Mono', monospace;
+  /* Сохраняйте класс page у тега body для удобной работы с темами */
+  background-image: var(--background-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  /* padding: 20px; */
+  position: relative;
+  overflow: hidden;
+
+}
+
+.header__corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--accent-color);
+}
+
+.header__corner--top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.header__corner--bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+/* REC */
+.header__rec {
+  position: absolute;
+  right: 11px;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--accent-color);
+}
+
+.header__rec::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+}
+
+
+.header__theme-menu {
+  margin-top: 62px;
+  grid-column: 2 / 3;
+  align-self: start;
+  /* display: flex;
+  justify-content: end; */
+}
+
+.header__theme-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-size: 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: lowercase;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 3px 13px 4px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--accent-color-transparent);
+
+}
+
+.header__theme-menu-button:focus {
+  border-block-end-color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--colors-accent);
+}
+
+/* Заголовок */
+.header__title {
+  grid-column: 1 / -1;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  line-height: clamp(6.0625rem, 4.9069rem + 4.9307vw, 8.0625rem);
+  text-transform: lowercase;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  margin: 55px 0px 43px 00px;
+}
+
+/* Подзаголовок */
+.header__subtitle {
+  grid-column: 1 / -1;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-dark-color);
+  font-size: 18px;
+  line-height: 1.46rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 57px;
+}
+
+/* Декоративный текст */
+.title-decor {
+  background-color: var(--accent-color, #ff0070);
+}
+
+.content {}
+
+.section {
+  margin-top: 50px;
+}
+
+.section__intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23.4px;
+  text-align: left;
+  color: var(--accent-color);
+}
+
+.section__topics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topic__subtitle {
+  font-size: 18px;
+  color: var(--text-dark-color);
+  line-height: 1.46rem;
+  font-weight: bold;
+}
+
+.topic__text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 23.4px;
+  text-align: left;
+  color: var(--text-light-color);
+}
+
+.section__focus{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.topic__subtitle--type2{
+  font-size: 18px;
+  color: var(--text-dark-color);
+  line-height: 1.46rem;
+  font-weight: normal;
 }
