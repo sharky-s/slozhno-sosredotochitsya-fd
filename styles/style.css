@@ -2,11 +2,8 @@
 .page {
   background-color: var(--background-color);
   margin: 0;
-  /* Убираем отступы */
   padding: 10px;
-  /* Добавляем внутренний отступ */
   font-family: 'IBM Plex Mono', monospace;
-  /* Сохраняйте класс page у тега body для удобной работы с темами */
   background-image: var(--background-url);
   background-size: cover;
   background-position: center;
@@ -20,7 +17,6 @@
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   gap: 10px;
-  /* padding: 20px; */
   position: relative;
   overflow: hidden;
 
@@ -73,8 +69,6 @@
   margin-top: 62px;
   grid-column: 2 / 3;
   align-self: start;
-  /* display: flex;
-  justify-content: end; */
 }
 
 .header__theme-menu-list {
@@ -110,6 +104,7 @@
 
 .header__theme-menu-button_active {
   border-color: var(--colors-accent);
+  pointer-events: none;
 }
 
 /* Заголовок */
@@ -136,42 +131,41 @@
   margin-bottom: 57px;
 }
 
-/* Декоративный текст */
 .title-decor {
   background-color: var(--accent-color, #ff0070);
 }
 
 /* Базовый стиль ссылки */
 .link-decor {
-  text-shadow: 2px 2px 0 var(--accent-color); /* Тень только для текста */
-  text-decoration: none; /* Убираем стандартное подчёркивание */
-  position: relative; /* Для псевдоэлемента */
-  text-underline-offset: 4px; /* Отступ для подчёркивания */
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+  position: relative;
+  text-underline-offset: 4px;
   cursor: pointer;
-  transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+  transition: color 0.3s ease-in-out;
 }
 
 /* Подчёркивание через псевдоэлемент */
 .link-decor::after {
   content: '';
   position: absolute;
-  bottom: -2px; /* Расположение линии чуть ниже текста */
+  bottom: -2px;
   left: 0;
-  width: 0; /* Изначально скрыто */
-  height: 1px; /* Толщина подчёркивания */
-  background-color: var(--text-light-color); /* Цвет подчёркивания */
-  transition: width 0.3s ease-in-out; /* Анимация появления линии */
-  z-index: -1; /* Линия под текстом */
+  width: 0;
+  height: 1px;
+  background-color: var(--text-light-color);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
 }
 
 /* Эффект при наведении */
 .link-decor:hover::after {
-  width: 100%; /* Полное подчёркивание при наведении */
+  width: 100%;
 }
 
 /* Эффект фокуса (рамка вокруг текста) */
 .link-decor:focus {
-  outline: none; /* Убираем стандартный outline */
+  outline: none;
 }
 
 /* Псевдоэлемент для рамки при фокусе */
@@ -182,17 +176,17 @@
   left: -2px;
   right: -2px;
   bottom: 0px;
-  border: 1px solid var(--text-light-color); /* Цвет рамки */
-  opacity: 0; /* Рамка невидима по умолчанию */
+  border: 1px solid var(--text-light-color);
+  opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: scale(0.9); /* Рамка сжатая по умолчанию */
-  z-index: -1; /* За текстом */
+  transform: scale(0.9);
+  z-index: -1;
 }
 
 /* Рамка проявляется при фокусе */
 .link-decor:focus::before {
-  opacity: 1; /* Рамка становится видимой */
-  transform: scale(1); /* Рамка возвращается к исходному размеру */
+  opacity: 1;
+  transform: scale(1);
 }
 
 
@@ -229,7 +223,7 @@
 .topic__subtitle {
   font-size: 18px;
   color: var(--text-dark-color);
-  line-height: 1.46rem;
+  line-height: 23.4px;
   font-weight: bold;
 }
 
@@ -241,20 +235,20 @@
   color: var(--text-light-color);
 }
 
-.section__focus{
+.section__focus {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.topic__subtitle--type2{
+.topic__subtitle--type2 {
   font-size: 18px;
   color: var(--text-dark-color);
-  line-height: 1.46rem;
+  line-height: 23.4px;
   font-weight: normal;
 }
 
-.section__gallery{
+.section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -262,7 +256,7 @@
 
 .gallery__grid {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
@@ -276,9 +270,9 @@
 .footer {
   margin-block-start: 50px;
   display: grid;
-  grid-template-columns: 1fr auto 1fr; 
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-items: center; 
+  justify-items: center;
   position: relative;
   min-height: 647px;
 }
@@ -291,5 +285,3 @@
   color: var(--title-color);
   margin: 0px 1px 0px 4px;
 }
-
-

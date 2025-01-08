@@ -1,13 +1,10 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+/* Общие переменные, по умолчанию тёмная тема */
 :root {
---accent-color: #FF0070;
---background-color: #000028;
---accent-color-transparent: rgba(255, 0, 112, 0.4);
---background-url: url('../images/cover-image-dark.png');
---title-color: #DB00FF;
---text-dark-color: #000028;
---text-light-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --background-color: #000028;
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
+  --background-url: url('../images/cover-image-dark.png');
+  --title-color: #DB00FF;
+  --text-dark-color: #000028;
+  --text-light-color: #F1B2CE;
 }

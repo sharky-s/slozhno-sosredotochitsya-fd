@@ -1,14 +1,5 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
+/* Светлая тема (принудительное переключение) */
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
   --accent-color: #FF8DCB;
   --background-url: url('../images/cover-image-light.png');
   --background-color: #FFF1F7;
@@ -16,25 +7,22 @@
   --title-color: #FFC2E6;
   --text-dark-color: #353430;
   --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
-    /* Нужен другой цвет текста */
 }
 
-.theme-light .header__corner  {
+.theme-light .header__corner {
   border-color: var(--text-dark-color);
-  /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-.theme-light .header__rec{
+.theme-light .header__rec {
   display: none;
 }
 
-.theme-light .header__theme-menu-button{
+.theme-light .header__theme-menu-button {
   color: var(--text-dark-color);
 }
 
 .theme-light .header__theme-menu-button:hover {
   border-color: var(--text-dark-color-transparent);
-  
 }
 
 .theme-light .header__theme-menu-button:focus {
@@ -45,14 +33,28 @@
   border-color: var(--text-dark-color);
 }
 
-.theme-light .section__title {
+.theme-light .section__title,
+.theme-light .topic__text,
+.theme-light .topic__subtitle--type2 {
   color: var(--text-dark-color);
 }
 
-.theme-light .topic__text {
-  color: var(--text-dark-color);
+.theme-light  .link-decor::after{
+  background-color: var(--accent-color);
 }
 
-.theme-light .topic__subtitle--type2{
-  color: var(--text-dark-color);
+.theme-light  .link-decor::before{
+  border: 1px solid var(--accent-color);
+}
+
+/* Поддержка автоматической темы браузера */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --background-url: url('../images/cover-image-light.png');
+    --background-color: #FFF1F7;
+    --title-color: #FFC2E6;
+    --text-dark-color: #353430;
+    --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
+  }
 }
