@@ -141,7 +141,60 @@
   background-color: var(--accent-color, #ff0070);
 }
 
-.content {}
+/* Базовый стиль ссылки */
+.link-decor {
+  text-shadow: 2px 2px 0 var(--accent-color); /* Тень только для текста */
+  text-decoration: none; /* Убираем стандартное подчёркивание */
+  position: relative; /* Для псевдоэлемента */
+  text-underline-offset: 4px; /* Отступ для подчёркивания */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+/* Подчёркивание через псевдоэлемент */
+.link-decor::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Расположение линии чуть ниже текста */
+  left: 0;
+  width: 0; /* Изначально скрыто */
+  height: 1px; /* Толщина подчёркивания */
+  background-color: var(--text-light-color); /* Цвет подчёркивания */
+  transition: width 0.3s ease-in-out; /* Анимация появления линии */
+  z-index: -1; /* Линия под текстом */
+}
+
+/* Эффект при наведении */
+.link-decor:hover::after {
+  width: 100%; /* Полное подчёркивание при наведении */
+}
+
+/* Эффект фокуса (рамка вокруг текста) */
+.link-decor:focus {
+  outline: none; /* Убираем стандартный outline */
+}
+
+/* Псевдоэлемент для рамки при фокусе */
+.link-decor::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  right: -2px;
+  bottom: 0px;
+  border: 1px solid var(--text-light-color); /* Цвет рамки */
+  opacity: 0; /* Рамка невидима по умолчанию */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(0.9); /* Рамка сжатая по умолчанию */
+  z-index: -1; /* За текстом */
+}
+
+/* Рамка проявляется при фокусе */
+.link-decor:focus::before {
+  opacity: 1; /* Рамка становится видимой */
+  transform: scale(1); /* Рамка возвращается к исходному размеру */
+}
+
 
 .section {
   margin-top: 50px;
@@ -238,3 +291,5 @@
   color: var(--title-color);
   margin: 0px 1px 0px 4px;
 }
+
+
