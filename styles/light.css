@@ -53,6 +53,7 @@
     --accent-color: #FF8DCB;
     --background-url: url('../images/cover-image-light.png');
     --background-color: #FFF1F7;
+    --accent-color-transparent: rgba(255, 0, 112, 0.4);
     --title-color: #FFC2E6;
     --text-dark-color: #353430;
     --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
