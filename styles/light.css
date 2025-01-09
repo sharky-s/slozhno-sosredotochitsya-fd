@@ -7,14 +7,15 @@
   --title-color: #FFC2E6;
   --text-dark-color: #353430;
   --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
-}
-
-.theme-light .header__corner {
-  border-color: var(--text-dark-color);
+  --text-main-color: var(--text-dark-color);
 }
 
 .theme-light .header__rec {
   display: none;
+}
+
+.theme-light .corner {
+  border-color: var(--text-dark-color);
 }
 
 .theme-light .header__theme-menu-button {
