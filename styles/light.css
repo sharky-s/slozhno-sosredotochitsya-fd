@@ -49,7 +49,7 @@
 }
 
 /* Поддержка автоматической темы браузера */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #FF8DCB;
     --background-url: url('../images/cover-image-light.png');
@@ -59,4 +59,8 @@
     --text-dark-color: #353430;
     --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
   }
-}
+
+  .header__rec {
+    display: none;
+  }
+} */
