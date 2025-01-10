@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   background-color: var(--background-color);
-  margin: 0;
+  margin: auto;
   padding: 10px;
   padding-block-end: 0;
   font-family: 'IBM Plex Mono', monospace;
@@ -459,6 +459,7 @@
   .header {
     display: flex;
     flex-direction: column;
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -473,7 +474,7 @@
 
   .header__title {
     font-size: var(--logo-size);
-    margin: 262px 0px 105px 00px;
+    margin: 272px 0px 114px 00px;
   }
 
   .header__subtitle {
@@ -500,12 +501,14 @@
   }
 
   .footer {
-    margin-block-start: 80px;
-    min-height: 728px;
-    margin-block-end: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 768px;
   }
 
   .footer__title{
     font-size: var(--logo-size);
+    margin-block-start: 40px;
   }
 }
