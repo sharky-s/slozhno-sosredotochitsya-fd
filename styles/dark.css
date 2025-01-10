@@ -5,6 +5,20 @@
 */
 
 :root.theme-dark {
+  --menu-color: var(--accent-color);
+  --menu-color-transparent: var(--accent-color-transparent);
+
+  --accent-color: #FF0070;
+  --background-color: #000028;
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
+  --background-url: url('../images/cover-image-dark.png');
+  --title-color: #DB00FF;
+  --text-dark-color: #000028;
+  --text-light-color: #F1B2CE;
+
+  --section__title-color: var(--accent-color);
+  --topic__text-color: var(--text-light-color);
+  --link-color: var(--text-light-color);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
