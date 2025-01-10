@@ -318,7 +318,6 @@
 @media (min-width: 768px) {
   .page {
     padding: 20px;
-    overflow-x: visible;
   }
 
   .header {
