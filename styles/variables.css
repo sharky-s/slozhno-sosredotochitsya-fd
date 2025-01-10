@@ -1,5 +1,8 @@
 /* Общие переменные, по умолчанию тёмная тема */
 :root {
+  --menu-color: var(--accent-color);
+  --menu-color-transparent: var(--accent-color-transparent);
+
   --accent-color: #FF0070;
   --background-color: #000028;
   --accent-color-transparent: rgba(255, 0, 112, 0.4);
@@ -7,6 +10,11 @@
   --title-color: #DB00FF;
   --text-dark-color: #000028;
   --text-light-color: #F1B2CE;
+
+  --section__title-color: var(--accent-color);
+  --topic__text-color: var(--text-light-color);
+  --link-color: var(--text-light-color);
+
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 

@@ -27,7 +27,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--menu-color);
 }
 
 .corner__top-right {
@@ -50,7 +50,7 @@
   right: 12px;
   font-size: 18px;
   font-weight: normal;
-  color: var(--accent-color);
+  color: var(--menu-color);
 }
 
 .header__rec::after {
@@ -61,8 +61,8 @@
   margin-left: 10px;
   margin-right: -3px;
   margin-bottom: 2px;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--menu-color);
+  box-shadow: 0px 0px 4px 2px var(--menu-color);
   border-radius: 50%;
   animation: blink 1s infinite alternate;
 }
@@ -94,23 +94,23 @@
   text-transform: lowercase;
   background: none;
   border: 1px solid transparent;
-  color: var(--accent-color);
+  color: var(--menu-color);
   cursor: pointer;
   padding: 3px 13px 4px 13px;
 }
 
 
 .header__theme-menu-button:hover {
-  border-color: var(--accent-color-transparent);
+  border-color: var(--menu-color-transparent);
 
 }
 
 .header__theme-menu-button:focus {
-  border-block-end-color: var(--accent-color);
+  border-block-end-color: var(--menu-color);
 }
 
 .header__theme-menu-button_active {
-  border-color: var(--accent-color);
+  border-color: var(--menu-color);
   pointer-events: none;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .title-decor {
-  background-color: var(--accent-color, #ff0070);
+  background-color: var(--accent-color);
   /* margin-bottom: 57px; */
 }
 
@@ -161,7 +161,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--text-light-color);
+  background-color: var(--link-color);
   transition: width 0.3s ease-in-out;
   z-index: -1;
 }
@@ -184,7 +184,7 @@
   left: -2px;
   right: -2px;
   bottom: 0px;
-  border: 1px solid var(--text-light-color);
+  border: 1px solid var(--link-color);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   transform: scale(0.9);
@@ -218,7 +218,7 @@
   font-weight: bold;
   line-height: 23.4px;
   text-align: left;
-  color: var(--accent-color);
+  color: var(--section__title-color);
 }
 
 .section__topics {
@@ -245,7 +245,7 @@
   font-weight: normal;
   line-height: 23.4px;
   text-align: left;
-  color: var(--text-light-color);
+  color: var(--topic__text-color);
 }
 
 .section__focus {

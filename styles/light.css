@@ -1,5 +1,8 @@
 /* Светлая тема (принудительное переключение) */
 :root.theme-light {
+  --menu-color: var(--text-dark-color);
+  --menu-color-transparent: var(--text-dark-color-transparent);
+
   --accent-color: #FF8DCB;
   --background-url: url('../images/cover-image-light.png');
   --background-color: #FFF1F7;
@@ -8,49 +11,22 @@
   --text-dark-color: #353430;
   --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
   --text-main-color: var(--text-dark-color);
+
+  --section__title-color: var(--text-dark-color);
+  --topic__text-color: var(--text-dark-color);
+  --link-color: var(--accent-color);
 }
 
 .theme-light .header__rec {
   display: none;
 }
 
-.theme-light .corner {
-  border-color: var(--text-dark-color);
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--text-dark-color);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-color: var(--text-dark-color-transparent);
-}
-
-.theme-light .header__theme-menu-button:focus {
-  border-block-end-color: var(--text-dark-color);
-}
-
-.theme-light .header__theme-menu-button_active {
-  border-color: var(--text-dark-color);
-}
-
-.theme-light .section__title,
-.theme-light .topic__text,
-.theme-light .topic__subtitle--type2 {
-  color: var(--text-dark-color);
-}
-
-.theme-light  .link-decor::after{
-  background-color: var(--accent-color);
-}
-
-.theme-light  .link-decor::before{
-  border: 1px solid var(--accent-color);
-}
-
 /* Поддержка автоматической темы браузера */
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
+    --menu-color: var(--text-dark-color);
+    --menu-color-transparent: var(--text-dark-color-transparent);
+
     --accent-color: #FF8DCB;
     --background-url: url('../images/cover-image-light.png');
     --background-color: #FFF1F7;
@@ -58,9 +34,14 @@
     --title-color: #FFC2E6;
     --text-dark-color: #353430;
     --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
+    --text-main-color: var(--text-dark-color);
+
+    --section__title-color: var(--text-dark-color);
+    --topic__text-color: var(--text-dark-color);
+    --link-color: var(--accent-color);
   }
 
   .header__rec {
     display: none;
   }
-} */
+}
