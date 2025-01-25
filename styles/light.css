@@ -14,7 +14,7 @@
 
   --section-title-color: var(--text-dark-color);
   --topic-text-color: var(--text-dark-color);
-  --link-color: var(--accent-color);
+  --link-color: var(--text-dark-color);
 }
 
 .theme-light .header__rec {
@@ -38,7 +38,7 @@
 
     --section-title-color: var(--text-dark-color);
     --topic-text-color: var(--text-dark-color);
-    --link-color: var(--accent-color);
+    --link-color: var(--text-dark-color);
   }
 
   .header__rec {
