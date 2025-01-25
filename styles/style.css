@@ -105,7 +105,8 @@
 
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
+  outline: none;
   border-block-end-color: var(--menu-color);
 }
 
@@ -175,7 +176,7 @@
 }
 
 /* Эффект фокуса (рамка вокруг текста) */
-.link-decor:focus {
+.link-decor:focus-visible {
   outline: none;
 }
 
@@ -195,7 +196,8 @@
 }
 
 /* Рамка проявляется при фокусе */
-.link-decor:focus::before {
+.link-decor:focus-visible::before {
+  outline: none;
   opacity: 1;
   transform: scale(1);
 }
