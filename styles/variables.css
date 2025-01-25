@@ -11,8 +11,8 @@
   --text-dark-color: #000028;
   --text-light-color: #F1B2CE;
 
-  --section__title-color: var(--accent-color);
-  --topic__text-color: var(--text-light-color);
+  --section-title-color: var(--accent-color);
+  --topic-text-color: var(--text-light-color);
   --link-color: var(--text-light-color);
 
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);

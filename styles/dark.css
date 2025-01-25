@@ -16,8 +16,8 @@
   --text-dark-color: #000028;
   --text-light-color: #F1B2CE;
 
-  --section__title-color: var(--accent-color);
-  --topic__text-color: var(--text-light-color);
+  --section-title-color: var(--accent-color);
+  --topic-text-color: var(--text-light-color);
   --link-color: var(--text-light-color);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -27,4 +27,8 @@
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+}
+
+.theme-dark .header__rec {
+  display: block;
 }

@@ -12,8 +12,8 @@
   --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
   --text-main-color: var(--text-dark-color);
 
-  --section__title-color: var(--text-dark-color);
-  --topic__text-color: var(--text-dark-color);
+  --section-title-color: var(--text-dark-color);
+  --topic-text-color: var(--text-dark-color);
   --link-color: var(--accent-color);
 }
 
@@ -36,8 +36,8 @@
     --text-dark-color-transparent: rgba(50, 49, 45, 0.4);
     --text-main-color: var(--text-dark-color);
 
-    --section__title-color: var(--text-dark-color);
-    --topic__text-color: var(--text-dark-color);
+    --section-title-color: var(--text-dark-color);
+    --topic-text-color: var(--text-dark-color);
     --link-color: var(--accent-color);
   }
 
